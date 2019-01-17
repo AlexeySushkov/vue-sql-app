@@ -10,7 +10,6 @@
         Home
       </router-link>
     </v-toolbar-title>
-
     <v-toolbar-items>
       <v-btn
         flat
@@ -20,9 +19,18 @@
         }">
         Browse
       </v-btn>
+      <v-btn
+        flat
+        dark
+        :to="{
+          name: 'songs-create'
+        }">
+        Create
+      </v-btn>
     </v-toolbar-items>
 
     <v-spacer></v-spacer>
+
     <v-toolbar-items>
       <v-btn
         v-if="!$store.state.isUserLoggedIn"
@@ -68,11 +76,13 @@ export default {
 </script>
 
 <style scoped>
+
 .home {
   cursor: pointer;
 }
 
 .home:hover {
-  color: #E9E;
+  color: rgb(0, 128, 255);
 }
+
 </style>
